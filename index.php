@@ -5,8 +5,8 @@
 	session_start();
 
 	//Make Constants using define.
-	define('client_id, value', 'f85328e8874142acb0e444510a344ed1');
-	define('client_secret', 'aca8602139db412fa8da0384a6098d70');
+	define('clientID', 'f85328e8874142acb0e444510a344ed1');
+	define('clientSecret', 'aca8602139db412fa8da0384a6098d70');
 	define('redirectURI', 'http://localhost/appacademyapi/index.php');
 	define('ImageDirectory', 'pics/');
 	
@@ -24,7 +24,10 @@
 	<link rel="author" href="human.txt">
 </head>
 <body>
-	<a href="https://api.instagram/oauth/authorize/?client_id=<?php echo client_ID; ?>&redirect_url=<?php echo redirectURI?>&response_type=code">LOGIN</a>
+<!-- create a login for people to go on Instagram API. -->
+<!-- creating a link to instagram through oauth/authorizing the account. -->
+<!-- after setting client_id to blank in the beginning , along with redirect_uri then you have to echo it out from the constants. -->
+	<a href="https:api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">LOGIN</a>
 	<script type="js/main.js"></script>
 </body>
 </html>
