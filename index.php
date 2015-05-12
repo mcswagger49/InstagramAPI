@@ -30,7 +30,7 @@
 		$instagramInfo = connectToInstagram($url);
 		$results = json_decode($instagramInfo, true);
 
-		echo $results['data']['0']['id'];//echoing out userID.
+		return $results['data']['0']['id'];//echoing out userID.
 	}
 	//function to print out images onto screen
 	function printImages($userID){
