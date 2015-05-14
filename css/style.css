@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=Chango);
+
+body {
+  padding-top:50px;
+  background-image:url(http://www.hdimagewallpaper.com/wp-content/uploads/2015/04/Blue-Nebula-Space-27-47087-HD-Images-Wallpapers.jpg);
+  font-family: 'Ubuntu Condensed', sans-serif;
+  position: relative;
+  background-size: 1366px 1060px;
+  background-repeat:no-repeat;
+  margin:0;
+  text-align: center;
+  /* make our image 100% width */
+  background-size:cover; 
+}
+
+a {
+ text-align: center;
+ font-family: 'Ubuntu Condensed', sans-serif;
+ border:5px double blue; 
+ padding:30px;
+ color: blue;
+ background-image:url(http://en.spaceengine.org/_ph/3/82685745.jpg);
+
+  /* set the background gradient */
+  background:url(http://en.spaceengine.org/_ph/3/82685745.jpg);
+  background-size:cover;
+
+  /* set the animation */
+  -webkit-animation:moving 20s ease infinite;
+}
+
+/* create the animation */
+ @-webkit-keyframes moving {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 500px;
+  }
+}​
+nav a{
+	font-family: 'Ubuntu Condensed', sans-serif;
+   color: lime;
+}
+@media(max-width: 1580px) {
+  html {
+    font-size: 18px;
+  }
+  .unbehaved-element {
+    font-size: 1.9em; /* Fine tune unbehaved elements */
+  }
+}
+@media(max-width: 980px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width:959px) {
+  #container{
+    width: 100%
+  }
+  #left-column{
+    width: 70%;
+  }
+  #right-column{
+    width: 30%;
+  }
+  img{
+    width: 100%;
+  }
+}
+@media screen and (max-width:640px) {
+  #left-column{
+    width: 100%;
+  }
+  #right-column{
+    width: 100%;
+  }
+}
+@media screen and (max-width:320px) {
+  #container{
+    width: 320px;
+  }
+}
