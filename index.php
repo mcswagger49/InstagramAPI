@@ -10,7 +10,7 @@
 	define('redirectURI', 'http://localhost/appacademyapi/index.php');
 	define('ImageDirectory', 'pics/');
 
-	//Function that is going to connect to Instagram.
+	//Function that is going to connect to Instagram.km
 	function connectToInstagram($url){
 		$ch = curl_init();
 
@@ -50,7 +50,7 @@
 	function savePictures($image_url){
 		echo $image_url .'<br>';
 		$filename = basename($image_url);//the filename is what we are storing. basename is the PHP built in method that we are using to store $image_url
-		echo $filename . '<br>';
+		return $filename . '<br>';
 
 		$destination = ImageDirectory . $filename;//making sure that the image doesn't exist in the storage.
 		file_put_contents($destination, file_get_contents($image_url));//goes and grabs an imagefile and stores is into our sserver/.
@@ -88,18 +88,20 @@ else{
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Jash</title>
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta charset="utf-8">
 	<meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale1.0">
-	<title>Jash</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="author" href="human.txt">
 </head>
 <body>
+      <a href="http://localhost/appacademyapi/index.php">HOME</a>
 <!-- create a login for people to go on Instagram API. -->
 <!-- creating a link to instagram through oauth/authorizing the account. -->
 <!-- after setting client_id to blank in the beginning , along with redirect_uri then you have to echo it out from the constants. -->
-	<a href="https:api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">LOGIN</a>
+ <a href="https:api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">LOGIN</a>
 	<script type="js/main.js"></script>
 </body>
 </html>
