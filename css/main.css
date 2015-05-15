@@ -1,0 +1,88 @@
+body {
+  top: 0; 
+  left: 0; 
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url("../images/guiltycrown-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+}
+.navbar-static-top
+{
+  max-width: 100%;
+  position: fixed;
+  width: 100%;
+}
+p
+{
+  max-width: 100%;
+}
+#bg {
+  max-width: 100%;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+p{
+  max-width: 100%;
+  padding: 40px;
+  font-size: 450%;
+  text-align: center;
+  color: black;
+  float: center;
+}
+h1 {
+  float: left;
+  font-size: 300%;
+  text-align: left;
+  color: white;
+  background-color:rgba(0,0,0,.6);
+  max-width: 100%;   
+}
+.col-xs-10{
+  color: white;
+  max-width: 100%;
+}
+.col-xs-2{
+  max-width: 100%;
+  font-size: 90%;
+  text-align: left;
+  color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.list-group-item{
+  border:0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  float: 30px;
+  max-width: 100%;
+}
+@media screen and (max-width: 460px) {
+  p{
+  font-size: 250%;
+  width: 100%;
+}
+h1{
+  font-size: 165%;
+  width: 100%;
+}
+.listed-group-item{
+  width: 100%;
+}
+.row{
+  width: 100%;
+}
+.col-xs-10{
+  width: 100%;
+}
+.col-xs-2{
+  width: 100%;
+}
+}

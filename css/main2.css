@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  -mox-box-sizing: border-box;
+}
+.navbar-static-top
+{
+position: fixed;
+width: 100%;
+}
+h1
+{
+padding-top: 30px;
+}
+
+html, body {
+  height: 100%;
+}
+p{
+  padding: 10px;
+}
+body {
+  font-family: helvetica, arial, sans-serif;
+  background-color: #49EAF2;
+}
+
+section {
+  height: 100%;
+  min-height: 250px;
+}
+
+.bodysec {
+  min-height: 700px;
+}
+ 
+#homesec {
+  background:
+ url(http://www.animeout.com/wp-content/uploads/2014/04/no_game_no_life_wallpaper_by_kazukamichan-d77debv-790x568.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 80px;
+}
+#test {
+  z-index: 99;
+  background: white;
+  position: fixed;
+  top: 0;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+}
+.right {
+  position: relative;
+  float: right;
+}
+
+img.right {
+  margin: 0 0 0 40px;
+  border-radius: 200px;
+}
+
+#copy {
+  padding: 20px 80px;
+  font-size: 24px;
+  text-align: justify;
+}
+
+#iconrow {
+  font-size: 130px;
+  text-align: justify;
+  margin-top: 50px;
+  color: white;
+}
+
+#iconrow::after {
+  content:'';
+  display: inline-block;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.large {
+  font-size: 45px;
+}
+.hoverblk:hover {
+  color: white;
+  transition: .3s;
+}
+@media screen and (max-width: 460px) {
+  img.right {
+  width: 100%;
+}
+p{
+  font-size: 50%;
+  margin: 0;
+  margin-left: 0;
+  width: 100%;
+}
+}

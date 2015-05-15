@@ -1,0 +1,14 @@
+.navbar-static-top
+{
+  max-width: 100%;
+  position: fixed;
+  width: 100%;
+}
+body{
+	background-color: #D16D08;
+}
+p{
+    text-align: center;
+    color: black;
+    float: center;
+}

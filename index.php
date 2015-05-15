@@ -1,5 +1,5 @@
 <?php
-	//Configuration for our PHP Server.
+	//Cofiguration for our PHP Server.
 	set_time_limit(0);
 	ini_set('default_socket_timeout', 300);
 	session_start();
@@ -34,7 +34,7 @@
 	}
 	//function to print out images onto screen
 	function printImages($userID){
-		$url = 'https://api.instagram.com/v1/users/'.$userID.'/media/recent?client_id='.clientID.'&count=5';
+		$url = 'https://api.instagram.com/v1/users/'.$userID.'/media/recent?client_id='.clientID.'&count=15';
 		$instagramInfo = connectToInstagram($url);
 		$results = json_decode($instagramInfo, true);
 
@@ -93,8 +93,15 @@ else{
 	<meta charset="utf-8">
 	<meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="author" href="human.txt">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/main2.css">
+        <link rel="stylesheet" type="text/css" href="css/main3.css">
+        <link rel="stylesheet" type="text/css" href="css/main4.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="author" href="human.txt">
 </head>
 <body>
       <a href="http://localhost/appacademyapi/index.php">HOME</a>
@@ -102,7 +109,9 @@ else{
 <!-- creating a link to instagram through oauth/authorizing the account. -->
 <!-- after setting client_id to blank in the beginning , along with redirect_uri then you have to echo it out from the constants. -->
  <a href="https:api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">LOGIN</a>
-	<script type="js/main.js"></script>
+		<script type="js/main.js"></script>
+		<script type="js/bootstrap.min.js"></script>
+		<script type="js/jquery-2.1.1.min.js"></script>
 </body>
 </html>
 <?php
