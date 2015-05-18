@@ -11,6 +11,8 @@ body {
   text-align: center;
   /* make our image 100% width */
   background-size:cover; 
+    border-radius: 25px;
+
 }
 
 a {
@@ -28,7 +30,6 @@ a {
   /* set the animation */
   -webkit-animation:moving 20s ease infinite;
 }
-
 /* create the animation */
  @-webkit-keyframes moving {
   0% {
@@ -38,7 +39,3 @@ a {
     background-position: 0 500px;
   }
 }​
-nav a{
-	font-family: 'Ubuntu Condensed', sans-serif;
-   color: lime;
-}
