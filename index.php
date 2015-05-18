@@ -40,7 +40,7 @@
 
 		//Parse through the info. one by one.
 		foreach ($results['data'] as $items){
-			$image_url = $items['images']['low_resolution']['url'];//going to go through all of my results and give myself back the URL of those pictures because we want to save it in the PHP server.
+			$image_url = $items['images']['standard_resolution']['url'];//going to go through all of my results and give myself back the URL of those pictures because we want to save it in the PHP server.
 			echo '<img src=" '.$image_url.'"/><br/>';	
 			//calling a function to save that $image_url
 			savePictures($image_url);	
@@ -48,13 +48,19 @@
 	}
 //function to save image to server
 	function savePictures($image_url){
-		echo $image_url .'<br>';
+		echo '<head>
+					<link rel="stylesheet" href="css/style.css">
+				</head>';
+		echo '<body id="body-class">';
+
+		return $image_url .'<br>';
 		$filename = basename($image_url);//the filename is what we are storing. basename is the PHP built in method that we are using to store $image_url
 		return $filename . '<br>';
 
 		$destination = ImageDirectory . $filename;//making sure that the image doesn't exist in the storage.
 		file_put_contents($destination, file_get_contents($image_url));//goes and grabs an imagefile and stores is into our sserver/.
 	}
+
 
 	if (isset($_GET['code'])){
 		$code = $_GET['code'];
@@ -93,8 +99,7 @@ else{
 	<meta charset="utf-8">
 	<meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale1.0">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/main2.css">
@@ -109,6 +114,7 @@ else{
 <!-- creating a link to instagram through oauth/authorizing the account. -->
 <!-- after setting client_id to blank in the beginning , along with redirect_uri then you have to echo it out from the constants. -->
  <a href="https:api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">LOGIN</a>
+		<embed src="http://localhost/appacademyapi/music/Witch-Doctor.mp3" autostart="true" loop="false" align="right" width="160" height="70"></embed>
 		<script type="js/main.js"></script>
 		<script type="js/bootstrap.min.js"></script>
 		<script type="js/jquery-2.1.1.min.js"></script>
